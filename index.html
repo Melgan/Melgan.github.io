@@ -1,60 +1,115 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Melgan : " />
 
-  <title>Melgan</title>
-  <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Melgan</title>
+  </head>
 
-</head>
+  <body>
 
-<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Melgan">View on GitHub</a>
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Melgan</h1>
-    </header>
-    <div id="container">
-      <p class="tagline"></p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/Melgan" class="code">View Melgan on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <p>Mam na imię Melchior, jestem studentem 1 roku informatyki na UG i mam nadzieję, że zdam :p</p>
-        </article>
-      </div>
+          <h1 id="project_title">Melgan</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
     </div>
-    <footer>
-      <div class="owner">
 
-      <p><a href="https://github.com/Melgan" class="avatar"><img src="https://0.gravatar.com/avatar/b32200be595b68e8fe6d18be3ba6df86?d=https%3A%2F%2Fidenticons.github.com%2Fc232e362bd14774ef6e63fd28c8c8160.png&amp;r=x&amp;s=60" width="48" height="48"/></a>View <a href="https://github.com/Melgan">Melgan</a> on <a href="https://www.github.com">GitHub</a></p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Mam na imię Melchior, jestem studentem 1 roku informatyki na UG i mam nadzieję, że zdam :p</p>
 
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/Melgan/Melgan.github.io/tarball/master" class="tar">tar</a><a href="https://github.com/Melgan/Melgan.github.io/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
+<p>oto bardzo prosty program napisany w C++, prosty, bo do każdej linijki trzeba dodawać 4 spacje by było jako kod i nie usuwało mi enterów, więc nie chce mi się do 250 linijek kodu dodawać tego ;)</p>
 
-  
-</body>
+<pre><code>#include &lt;iostream&gt; 
+using namespace std;
+
+main()
+
+{
+cout&lt;&lt;"buuuu"&lt;&lt;endl;
+
+system("pause");
+return 0;
+
+}
+</code></pre>
+
+<p>a to przykładowy skrypt w bashu sprawdzający czy ilość linijek/znaków/bajtów jest większa w pliku 1 czy 2</p>
+
+<pre><code>#!/bin/bash
+
+if [ $# -eq 3 ]
+      then
+                    if [ -e $1 -a -e $2 ]
+                            then
+                                    l1=` cat $1 | wc -$3`
+                                    l2=` cat $2 | wc -$3`
+                                    if [ $l1  -gt $l2  ]
+                                       then
+                                                    echo "więcej znaków ma  plik $1"
+                                       else
+                                                    echo "więcej znaków ma  plik $2"
+                                    fi
+                    fi
+fi
+
+
+
+exit 0
+</code></pre>
+
+<p>a tutaj prosta pętla while w bashu</p>
+
+<pre><code>#!/bin/bash
+
+i=1
+wynik=1
+while ((i&lt;=$1));
+do
+wynik="$wynik*$i"
+let "i++";
+done
+echo $wynik
+
+exit 0
+</code></pre>
+
+<p>oraz pętla for w bashu</p>
+
+<pre><code>#!/bin/bash
+
+
+for ((i=$1; i&lt;=$2;i++))
+do
+echo $i
+done
+
+
+
+exit 0
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
